@@ -13,3 +13,9 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['evanlicubs@gmail.com']
+
+    POSTS_PER_PAGE = 25
+
+# python -m smtpd -n -c DebuggingServer localhost:8025
+# export MAIL_SERVER=localhost
+# export MAIL_PORT = 8025
