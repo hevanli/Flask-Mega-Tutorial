@@ -17,13 +17,11 @@ class Config(object):
     POSTS_PER_PAGE = 25
     LANGUAGES = ['en', 'es']
 
+    MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
+
 # python -m smtpd -n -c DebuggingServer localhost:8025
 # export MAIL_SERVER=localhost
 # export MAIL_PORT = 8025
 
-# pybabel extract -F babel.cfg -k _l -o messages.pot .
-
-# pybabel init -i messages.pot -d app/translations -l es
-# pybabel update -i messages.pot -d app/translations
-
-# pybabel compile -d app/translations
+# flask db migrate -m "message"
+# flask db upgrade
